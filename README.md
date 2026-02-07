@@ -9,6 +9,7 @@ Each loader is self-contained in a single HTML file and can be used directly in 
 - Loading Screen 1 – https://suspect-911.github.io/loader-collection/Loading%20Screen1
 - Loading Screen 2 – https://suspect-911.github.io/loader-collection/Loading%20Screen2
 - Loading Screen 3 – https://suspect-911.github.io/loader-collection/Loading%20Screen3
+- 
 ~~- Loading Screen 4 – https://suspect-911.github.io/loader-collection/Loading%20Screen4~~
 - Loading Screen 5 – https://suspect-911.github.io/loader-collection/Loading%20Screen5
 - Loading Screen 6 – https://suspect-911.github.io/loader-collection/Loading%20Screen6
