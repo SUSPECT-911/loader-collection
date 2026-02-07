@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Google Loader</title>
+
+<style>
+html,body{
+  margin:0;
+  height:100%;
+  background:#111;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.spinner {
+  width:64px;
+  height:64px;
+  animation: rotate 1.4s linear infinite;
+}
+
+.path {
+  fill:none;
+  stroke-width:6;
+  stroke-linecap:round;
+  stroke-dasharray:1,200;
+  stroke-dashoffset:0;
+  animation: dash 1.4s ease-in-out infinite,
+             colors 5.6s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes dash {
+  0%   { stroke-dasharray:1,200; stroke-dashoffset:0; }
+  50%  { stroke-dasharray:90,200; stroke-dashoffset:-35; }
+  100% { stroke-dasharray:1,200; stroke-dashoffset:-125; }
+}
+
+@keyframes colors {
+  0%   { stroke:#4285f4; }
+  25%  { stroke:#ea4335; }
+  50%  { stroke:#fbbc05; }
+  75%  { stroke:#34a853; }
+  100% { stroke:#4285f4; }
+}
+</style>
+</head>
+
+<body>
+
+<svg class="spinner" viewBox="25 25 50 50">
+  <circle class="path" cx="50" cy="50" r="20"/>
+</svg>
+
+</body>
+</html>

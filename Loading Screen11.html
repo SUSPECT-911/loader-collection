@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dot Loader</title>
+
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  display: flex;
+  gap: 14px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: wave 1.4s ease-in-out infinite;
+}
+
+/* colors */
+.dot:nth-child(1) { background:#ff6d3a; animation-delay: 0s; }
+.dot:nth-child(2) { background:#ff4d4d; animation-delay:.1s; }
+.dot:nth-child(3) { background:#ff2f2f; animation-delay:.2s; }
+.dot:nth-child(4) { background:#ff2f2f; animation-delay:.3s; }
+.dot:nth-child(5) { background:#ff2f2f; animation-delay:.4s; }
+.dot:nth-child(6) { background:#ff2f2f; animation-delay:.3s; }
+.dot:nth-child(7) { background:#ff9f1a; animation-delay:.2s; }
+.dot:nth-child(8) { background:#ffd000; animation-delay:.1s; }
+
+@keyframes wave {
+  0%, 100% {
+    transform: scale(0.4);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 1;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="loader">
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+</div>
+
+</body>
+</html>

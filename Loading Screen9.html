@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Google Arc Loader</title>
+
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  width: 72px;
+  height: 72px;
+  animation: rotate 1.6s linear infinite;
+}
+
+.arc {
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 60 200;
+  animation: dash 1.6s ease-in-out infinite;
+}
+
+.blue   { stroke: #4285f4; }
+.red    { stroke: #ea4335; }
+.yellow { stroke: #fbbc05; }
+.green  { stroke: #34a853; }
+
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 80, 200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: -125;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<svg viewBox="25 25 50 50">
+  <circle class="arc blue"   cx="50" cy="50" r="20"/>
+  <circle class="arc red"    cx="50" cy="50" r="20" style="animation-delay:.15s"/>
+  <circle class="arc yellow" cx="50" cy="50" r="20" style="animation-delay:.3s"/>
+  <circle class="arc green"  cx="50" cy="50" r="20" style="animation-delay:.45s"/>
+</svg>
+
+</body>
+</html>

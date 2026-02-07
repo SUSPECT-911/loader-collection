@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Loading Percentage</title>
+
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.percent {
+  font-size: 48px;
+  color: #fff;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="percent" id="percent">0%</div>
+
+<script>
+let value = 0;
+const percent = document.getElementById("percent");
+
+const timer = setInterval(() => {
+  if (value >= 100) {
+    clearInterval(timer);
+    return;
+  }
+  value++;
+  percent.textContent = value + "%";
+}, 40);
+</script>
+
+</body>
+</html>

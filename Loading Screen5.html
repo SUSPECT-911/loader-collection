@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Google Play Loader</title>
+
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 6px solid transparent;
+  border-top-color: #34a853;   /* green */
+  border-right-color: #4285f4;/* blue */
+  border-bottom-color: #fbbc05;/* yellow */
+  border-left-color: #ea4335; /* red */
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+</style>
+</head>
+
+<body>
+  <div class="spinner"></div>
+</body>
+</html>

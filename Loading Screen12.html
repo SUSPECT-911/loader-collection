@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gear Loader</title>
+
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+  background: radial-gradient(circle, #000, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+/* GEARS WRAPPER */
+.gears {
+  position: relative;
+  width: 140px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+
+/* GEAR BASE */
+.gear {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: spin 2s linear infinite;
+  box-shadow: 0 0 15px currentColor;
+}
+
+/* GEAR TEETH */
+.gear::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background:
+    repeating-conic-gradient(
+      currentColor 0deg 12deg,
+      transparent 12deg 24deg
+    );
+}
+
+/* COLORS + POSITIONS */
+.gear.orange {
+  color: #ff8c1a;
+  top: 0;
+  left: 40px;
+}
+
+.gear.red {
+  color: #ff3b1f;
+  bottom: 0;
+  left: 10px;
+  animation-direction: reverse;
+}
+
+.gear.yellow {
+  color: #ffb000;
+  bottom: 0;
+  right: 10px;
+}
+
+/* CENTER HOLE */
+.gear::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  background: #000;
+  border-radius: 50%;
+}
+
+/* TEXT */
+.loading {
+  color: #e6ff6a;
+  letter-spacing: 4px;
+  font-size: 18px;
+  text-shadow: 0 0 10px #e6ff6a;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="gears">
+    <div class="gear orange"></div>
+    <div class="gear red"></div>
+    <div class="gear yellow"></div>
+  </div>
+  <div class="loading">LOADING</div>
+</div>
+
+</body>
+</html>

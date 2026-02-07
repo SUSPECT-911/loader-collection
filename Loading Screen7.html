@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Loading Bar</title>
+
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #0f1224;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  position: relative;
+  width: 260px;
+  height: 8px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  left: -40%;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, #ff4d4d, #ff9f43);
+  animation: move 1.4s linear infinite;
+}
+
+@keyframes move {
+  from { left: -40%; }
+  to   { left: 100%; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="loader"></div>
+
+</body>
+</html>

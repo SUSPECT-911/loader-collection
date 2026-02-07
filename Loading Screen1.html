@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+  margin:0;
+  background:#000;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.loader{
+  position:relative;
+  width:80px;
+  height:80px;
+}
+
+.loader span{
+  position:absolute;
+  width:10px;
+  height:10px;
+  background:#fff;
+  border-radius:50%;
+  top:50%;
+  left:50%;
+  transform-origin:0 -30px;
+  animation: fade 1.2s linear infinite;
+  opacity:0;
+}
+
+.loader span:nth-child(n){
+  transform: rotate(calc(var(--i) * 30deg));
+  animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes fade{
+  0%{opacity:1;}
+  100%{opacity:0.1;}
+}
+</style>
+</head>
+<body>
+
+<div class="loader">
+  <span style="--i:0"></span>
+  <span style="--i:1"></span>
+  <span style="--i:2"></span>
+  <span style="--i:3"></span>
+  <span style="--i:4"></span>
+  <span style="--i:5"></span>
+  <span style="--i:6"></span>
+  <span style="--i:7"></span>
+  <span style="--i:8"></span>
+  <span style="--i:9"></span>
+  <span style="--i:10"></span>
+  <span style="--i:11"></span>
+</div>
+
+</body>
+</html>

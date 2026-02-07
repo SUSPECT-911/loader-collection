@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Loading</title>
+
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* TEXT */
+.text {
+  letter-spacing: 2px;
+}
+
+/* MOVING DOT */
+.dot {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  animation: move 1.6s linear infinite;
+}
+
+@keyframes move {
+  0%   { left: 0; opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+  <div class="dot"></div>
+  <div class="text">Loading...</div>
+</div>
+
+</body>
+</html>
